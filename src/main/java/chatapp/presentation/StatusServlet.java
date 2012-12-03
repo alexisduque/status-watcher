@@ -26,12 +26,13 @@ import chatapp.components.Statuses;
 public class StatusServlet extends HttpServlet {
     
   
-    @Inject Statuses statuses;
+    @EJB Statuses statuses;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("statusMap", statuses.statusMap);
         request.getServletContext().getRequestDispatcher("/WEB-INF/views/status.jsp").forward(request, response);
+
     }
     
     

@@ -14,6 +14,7 @@ import java.util.Map;
  */
 
 @Singleton
+
 public class Statuses {
     
     public Map<String, String> statusMap = new HashMap();

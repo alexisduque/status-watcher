@@ -21,7 +21,7 @@
     <body>
         
 
-        <form method="GET" action="status">
+        <form>
             <table align ="center"><tr valign="center" heigth="100%"><td>
                 <table>
                     <tr>
@@ -32,11 +32,7 @@
                     <tr>
                         <td align="center">
 
-<textarea class="input-xxlarge" name="board" rows="20" readonly="true">
-    <% Map<String, String> statusMap = (HashMap)request.getAttribute("statusMap"); %>
-    <% for (String mapKey : statusMap.keySet()) { %> 
-    <% String name = mapKey;%>
-    <% String status = statusMap.get(mapKey);%>
+<textarea class="input-xxlarge" name="board" rows="20" readonly="true"><% Map<String, String> statusMap = (HashMap)request.getAttribute("statusMap"); %><% for (String mapKey : statusMap.keySet()) { %> <% String name = mapKey;%><% String status = statusMap.get(mapKey);%>
 <%= name %> is <%= status %><%}%>
 </textarea>
 
